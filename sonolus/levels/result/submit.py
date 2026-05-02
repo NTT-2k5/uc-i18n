@@ -28,21 +28,28 @@ async def main(request: SonolusRequest, data: ServerSubmitLevelResultRequest):
             status_code=status.HTTP_403_FORBIDDEN,
             detail=locale.leaderboards.YOU_ARE_BANNED,
         )
-    
+
     user_engine = data.replay.level.engine
 
-    server_engines = {engine.name: engine for engine in await request.app.run_blocking(
-        compile_engines_list, request.app.base_url, request.state.localization
-    )}
+    server_engines = {
+        engine.name: engine
+        for engine in await request.app.run_blocking(
+            compile_engines_list, request.app.base_url, request.state.localization
+        )
+    }
 
     server_engine = server_engines[request.state.engine]
 
-    if (user_engine.playData.hash != server_engine.playData.hash) or\
-        (user_engine.watchData.hash != server_engine.watchData.hash) or\
-        (user_engine.rom.hash != server_engine.rom.hash):
+    if (
+        (user_engine.playData.hash != server_engine.playData.hash)
+        or (user_engine.watchData.hash != server_engine.watchData.hash)
+        or (user_engine.rom.hash != server_engine.rom.hash)
+    ):
 
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="You are using an outdated engine")
-
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="You are using an outdated engine",
+        )
 
     return ServerSubmitLevelResultResponse(
         key=replay.generate_upload_key(
