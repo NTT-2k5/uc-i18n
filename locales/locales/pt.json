@@ -49,6 +49,7 @@
   "default_skin": "Skin do servidor",
   "default_skin_desc": "Escolha a skin padrão para usar!\nA padrão é a skin padrão da engine.\n\nNOTA: Se uma engine não for tiver a skin compatível, a skin padrão da engine será usada no lugar.",
   "notifications_plural": "Você tem {num} novas notificações!\nPor favor, leia-as para continuar no servidor.",
+  "notifications_singular": "Você tem {num} novas notificações!\nPor favor, leia-as para continuar no servidor.",
   "uwu": "UwU >.<",
   "uwu_desc": "UwUificar seu menu (SOMENTE EN/TR )",
   "slightly": "Um pouco",
