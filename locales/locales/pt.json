@@ -47,9 +47,9 @@
   "default_engine": "Engine do Servidor",
   "default_engine_desc": "Escolha a engine do servidor para usar!",
   "default_skin": "Skin do servidor",
-  "default_skin_desc": "Escolha o tipo de skin padrão a ser usado! A skin será diferente dependendo da engine (por exemplo, a skin V1 é um pouquinho diferente no Rush em comparação com o Next), mas será aplicada a todas as engines.\n\nOBSERVAÇÃO: se uma engine não tiver a skin compatível, ele usará a skin padrão. ",
-  "notifications_plural": "Você tem {num} novas notificações! As notificações do sistema podem ser encontradas em \"Posts\". \nLeia-as para prosseguir para o servidor. ",
-  "notifications_singular": "Você tem {num} nova notificação! As notificações do sistema podem ser encontradas em \"Posts\". \nLeia-as para prosseguir para o servidor. ",
+  "default_skin_desc": "Escolha a skin padrão para usar!\nA padrão é a skin padrão da engine.\n\nNOTA: Se uma engine não for tiver a skin compatível, a skin padrão da engine será usada no lugar.",
+  "notifications_plural": "Você tem {num} novas notificações!\nPor favor, leia-as para continuar no servidor.",
+  "notifications_singular": "Você tem {num} novas notificações!\nPor favor, leia-as para continuar no servidor.",
   "uwu": "UwU >.<",
   "uwu_desc": "UwUificar seu menu (SOMENTE EN/TR )",
   "slightly": "Um pouco",
@@ -60,6 +60,10 @@
   "rerate": "Reavaliar",
   "rerate_desc": "Reavaliar o nível, opcionalmente adicionando constantes.",
   "rerate_desc_not_mod": "Reavaliar o nível.",
+  "show_resource_buttons": "Mostrar os Botões de Recursos do Servidor",
+  "like": "Gosto ({num})",
+  "unlike": "Não Gosto ({num})",
+  "announcements": "Avisos",
   "search": {
     "FILTERS": "Filtros (Página {page}/{pageCount})",
     "ADVANCED_SEARCH": "Pesquisa Avançada ",
@@ -102,6 +106,15 @@
     "VISIBILITY_PRIVATE": "Privado"
   },
   "leaderboard": {
+    "YOU_ARE_BANNED": "Você está banido",
+    "ARCADE_SCORE_SPEED": "Pontuação de Arcade",
+    "ACCURACY_SCORE": "Pontuação de precisão",
+    "ARCADE_SCORE_NO_SPEED": "Arcade Score (no speed bonus)",
+    "RANK_MATCH": "Partida Rankeada",
+    "LEAST_COMBO_BREAKS": "Menos quebras de combo",
+    "LEAST_MISSES": "Menos Erros",
+    "PERFECT": "Contagem Perfeita",
+    "BAD_ENGINE": "O envio de pontuação não é compatível com a engine {engine_name}."
   },
   "background": {
     "BACKGROUNDSELECT": "Seleção de Fundo",
@@ -125,12 +138,13 @@
     "UNREAD": "Notificações não lidas",
     "UNREAD_STATUS": "Não lida",
     "READ_STATUS": "Lida",
-    "NOTIFICATION_DESC_UNREAD": "Você pode achar suas notificações passadas clicando em \"Mais\". Você tem notificações não lidas que precisam ser lidas.",
-    "NOTIFICATION_DESC": "Você pode achar suas notificações passadas clicando em \"Mais\". Você não tem nenhuma notificação não lida.",
+    "NOTIFICATION_DESC_UNREAD": "Você pode encontrar todas as suas notificações e avisos anteriores clicando em \"Mais\". Você tem notificações não lidas que precisam ser lidas.",
+    "NOTIFICATION_DESC": "Você pode encontrar todas as suas notificações e avisos anteriores clicando em \"Mais\". No momento, você não tem nenhuma notificação não lida.",
     "templates": {
       "CHART_VISIBILITY_CHANGED": "A visibilidade da sua chart \"{chart_name}\" foi atualizada para {visibility_status}. Revise nossas políticas de upload para entender por que essa alteração foi necessária. Se você corrigir sua chart para que esteja em conformidade, poderá alterá-lo novamente para Público. Caso contrário, mantenha-o como está, ou seremos forçados a excluí-lo. ",
       "COMMENT_DELETED": "Seu comentário foi excluído por violar nossa política de comentários.\nPor favor certifique-se que todos os comentários siga as diretrizes da nossa comunidade.\n\n----------------------\nCOMENTÁRIO:\n\n{comment_content}",
-      "CHART_DELETED": "Sua chart \"{chart_name}\" foi excluída por violar nossas regras de upload. Reserve um momento para revisar nossas diretrizes de upload de charts para mais informações. "
+      "CHART_DELETED": "Sua chart \"{chart_name}\" foi excluída por violar nossas regras de upload. Reserve um momento para revisar nossas diretrizes de upload de charts para mais informações. ",
+      "LEADERBOARD_SCORE_DELETED": "Sua pontuação no ranking da chart \"{chart_name}\" foi excluída por violar nossas regras. Por favor, reserve um momento para revisar nossas diretrizes para obter mais informações."
     }
   }
 }
