@@ -89,6 +89,7 @@ async def main(request: SonolusRequest):
                     ServerOption_Value(name="owo", title=locale.slightly),
                     ServerOption_Value(name="uwu", title=locale.a_lot),
                     ServerOption_Value(name="uvu", title=locale.extreme),
+                    ServerOption_Value(name="max", title=locale.max_uwu),
                 ],
             )
         )

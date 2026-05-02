@@ -197,6 +197,18 @@ MEME_TO_MEM_FIRST = re.compile(r"Meme")
 MEME_TO_MEM_SECOND = re.compile(r"Mem")
 FEEL_TO_FELL = re.compile(r"^([Ff])eel$")
 
+# LEVEL 3 PATTERNS
+STUTTER_WORD = re.compile(r"^([A-Za-z])")
+S_TO_SH = re.compile(r"([Ss])(?=[aeiou])")
+WORD_FINAL_Y_TO_YW = re.compile(r"y$")
+WORD_FINAL_E_TO_EW = re.compile(r"([^w])e$")
+ING_TO_IN = re.compile(r"([A-Za-z])ing\b")
+AND_TO_AN = re.compile(r"\b([Aa])nd\b")
+FOR_TO_FWO = re.compile(r"\b([Ff])or\b")
+WITH_TO_WIF = re.compile(r"\b([Ww])ith\b")
+JUST_TO_JUWST = re.compile(r"\b([Jj])ust\b")
+HAVE_TO_HAB = re.compile(r"\b([Hh])ave\b")
+
 # Additional kaomojis come from [owoify](https://pypi.org/project/owoify/) and Discord.
 FACES = [
     "(・`ω´・)",
@@ -474,6 +486,60 @@ def map_feel_to_fell(input: Word) -> Word:
     return input.replace(FEEL_TO_FELL, "\\1ell")
 
 
+# LEVEL 3 MAPPERS
+def map_stutter(input: Word) -> Word:
+    word_str = str(input)
+    if len(word_str) < 2:
+        return input
+    match = STUTTER_WORD.match(word_str)
+    if match and random.randint(0, 2) == 0:
+        first_char = match.group(1)
+        input.word = f"{first_char}-{word_str}"
+    return input
+
+
+def map_s_to_sh(input: Word) -> Word:
+    return input.replace(S_TO_SH, "\\1h")
+
+
+def map_word_final_y_to_yw(input: Word) -> Word:
+    return input.replace(WORD_FINAL_Y_TO_YW, "yw")
+
+
+def map_word_final_e_to_ew(input: Word) -> Word:
+    return input.replace(WORD_FINAL_E_TO_EW, "\\1ew")
+
+
+def map_ing_to_in(input: Word) -> Word:
+    return input.replace(ING_TO_IN, "\\1in")
+
+
+def map_and_to_an(input: Word) -> Word:
+    return input.replace(AND_TO_AN, "\\1n")
+
+
+def map_for_to_fwo(input: Word) -> Word:
+    return input.replace(FOR_TO_FWO, "\\1wo")
+
+
+def map_with_to_wif(input: Word) -> Word:
+    return input.replace(WITH_TO_WIF, "\\1if")
+
+
+def map_just_to_juwst(input: Word) -> Word:
+    return input.replace(JUST_TO_JUWST, "\\1uwst")
+
+
+def map_have_to_hab(input: Word) -> Word:
+    return input.replace(HAVE_TO_HAB, "\\1ab")
+
+
+def map_add_tilde(input: Word) -> Word:
+    if random.randint(0, 3) == 0:
+        input.word = str(input) + "~"
+    return input
+
+
 WORD_REGEX = re.compile(r"[^\s]+")
 SPACE_REGEX = re.compile(r"\s+")
 URL_REGEX = re.compile(r"https?://\S+|www\.\S+")
@@ -502,7 +568,7 @@ def owoify(
     ----
     Inputs:
     - source (str) : The source string
-    - level (int) : How much it should be owoified. 0-2, 0 being low and 2 being high
+    - level (int) : How much it should be owoified. 0-3, 0 being low and 3 being max
     - symbols (bool) : Whether to replace symbols (such as `"<", ">", "[", "]", "{", "}", ".", ",", ";", "!"`)
     ----
     Outputs:
@@ -573,6 +639,19 @@ def owoify(
             map_mem_to_mwem,
             unmap_nywo_to_nyo,
         ]
+        MAX_MAPPING_LIST = [
+            map_stutter,
+            map_s_to_sh,
+            map_word_final_y_to_yw,
+            map_word_final_e_to_ew,
+            map_ing_to_in,
+            map_and_to_an,
+            map_for_to_fwo,
+            map_with_to_wif,
+            map_just_to_juwst,
+            map_have_to_hab,
+            map_add_tilde,
+        ]
     elif locale == "tr":
         SPECIFIC_WORD_MAPPING_LIST = []
         UVU_MAPPING_LIST = [
@@ -587,6 +666,12 @@ def owoify(
             map_ple_to_pwe,
             map_r_or_l_to_w,
         ]  # level 0
+        MAX_MAPPING_LIST = [
+            map_stutter,
+            map_s_to_sh,
+            map_ing_to_in,
+            map_add_tilde,
+        ]  # level 3
     else:
         raise ValueError(f"Unsupported locale {locale}")
 
@@ -609,6 +694,15 @@ def owoify(
                 for func in OWO_MAPPING_LIST:
                     word = func(word)
             case 2:
+                for func in UVU_MAPPING_LIST:
+                    word = func(word)
+                for func in UWU_MAPPING_LIST:
+                    word = func(word)
+                for func in OWO_MAPPING_LIST:
+                    word = func(word)
+            case 3:
+                for func in MAX_MAPPING_LIST:
+                    word = func(word)
                 for func in UVU_MAPPING_LIST:
                     word = func(word)
                 for func in UWU_MAPPING_LIST:
@@ -647,6 +741,8 @@ def handle_uwu(source: str, locale: str, uwu_level: str, symbols: bool = True) -
             return owoify(source, level=1, locale=locale, symbols=symbols)
         case "uvu":
             return owoify(source, level=2, locale=locale, symbols=symbols)
+        case "max":
+            return owoify(source, level=3, locale=locale, symbols=symbols)
 
     return source
 

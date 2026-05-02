@@ -919,6 +919,13 @@ class Loc:
         return self._get("extreme")
 
     @property
+    def max_uwu(self) -> str:
+        """
+        Maximum
+        """
+        return self._get("max_uwu")
+
+    @property
     def invalid_constant(self) -> str:
         """
         Invalid constant! Must have a maximum of 4 decimals between -999 and 999

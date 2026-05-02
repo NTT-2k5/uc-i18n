@@ -49,6 +49,7 @@
     "slightly": "Slightly",
     "a_lot": "A Lot",
     "extreme": "Extreme",
+    "max_uwu": "Maximum",
     "invalid_constant": "Invalid constant! Must have a maximum of 4 decimals between -999 and 999",
     "rerate": "Rerate",
     "rerate_desc": "Rerate the level, optionally adding constants.",

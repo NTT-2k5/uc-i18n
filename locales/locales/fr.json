@@ -55,6 +55,7 @@
   "slightly": "Légèrement",
   "a_lot": "Beaucoup",
   "extreme": "Extrême",
+  "max_uwu": "Maximum",
   "invalid_constant": "Constante invalide ! Doit contenir au maximum 4 décimales entre -999 et 999.",
   "rerate": "Réévalue",
   "rerate_desc": "Réévalue le niveau, en ajoutant éventuellement des constantes.",

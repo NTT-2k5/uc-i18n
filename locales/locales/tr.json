@@ -55,6 +55,7 @@
   "slightly": "Hafif",
   "a_lot": "Çok fazla",
   "extreme": "Aşırı",
+  "max_uwu": "Maksimum",
   "invalid_constant": "Geçersiz seviye katsayısı! -999 ile 999 arasında en fazla 4 ondalık basamak olmalıdır",
   "rerate": "Yeniden derecelendir",
   "rerate_desc": "Seviyeyi yeniden derecelendirin, isteğe bağlı olarak seviye katsayısı ekleyin.",

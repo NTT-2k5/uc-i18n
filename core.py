@@ -91,7 +91,7 @@ class SonolusFastAPI(FastAPI):
 
 class _RequestState(State):
     localization: str
-    uwu: Literal["off", "uwu", "owo", "uvu"]
+    uwu: Literal["off", "uwu", "owo", "uvu", "max"]
     levelbg: Literal["default_or_v3", "default_or_v1", "v1", "v3"]
     staff_pick: Literal["off", "true", "false"]
     particle: str
@@ -154,7 +154,7 @@ class SonolusMiddleware(BaseHTTPMiddleware):
             "v3",
         ]:
             request.state.levelbg = "default_or_v3"
-        if not request.state.uwu in ["off", "uwu", "owo", "uvu"]:
+        if not request.state.uwu in ["off", "uwu", "owo", "uvu", "max"]:
             request.state.uwu = "off"
         if not request.state.staff_pick in ["off", "true", "false"]:
             request.state.staff_pick = "off"
