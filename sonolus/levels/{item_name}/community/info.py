@@ -28,7 +28,7 @@ async def main(request: SonolusRequest, item_name: str):
                             required=True,
                             default="",
                             placeholder="#COMMENT_PLACEHOLDER",
-                            limit=200,
+                            limit=1500,
                             shortcuts=[],
                         )
                     ],
