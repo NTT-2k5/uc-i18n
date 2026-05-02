@@ -59,7 +59,7 @@
     "FILTERS": "Bộ lọc (Trang {page}/{pageCount})",
     "ADVANCED_SEARCH": "Tìm kiếm nâng cao",
     "STAFF_PICK_SEARCH_DESC": "Tùy chỉnh bộ lọc chart được chọn bởi đội ngũ. (Mặc định sẽ được tùy chọn theo 'Cấu hình' nếu có)",
-    "STAFF_PICK_CONFIG_DESC": "Tùy chỉnh bộ lọc chart được chọn bởi đội ngũ. Mặc định mọi chart sẽ được hiện thị\n\nLƯU Ý: Nếu bạn chọn một trong hai ('có bình chọn' hay 'không bình chọn') thì các chart khác sẽ bị loại trừ khỏi danh sách (Trừ mục Chart ngẫu nhiên 'được bình chọn' hay 'không bình chọn' ra)".
+    "STAFF_PICK_CONFIG_DESC": "Tùy chỉnh bộ lọc chart được chọn bởi đội ngũ. Mặc định mọi chart sẽ được hiện thị\n\nLƯU Ý: Nếu bạn chọn một trong hai ('có bình chọn' hay 'không bình chọn') thì các chart khác sẽ bị loại trừ khỏi danh sách (Trừ mục Chart ngẫu nhiên 'được bình chọn' hay 'không bình chọn' ra).",
     "STAFF_PICK_OFF": "Mặc định",
     "STAFF_PICK_TRUE": "Chỉ chart được chọn",
     "STAFF_PICK_FALSE": "Chỉ chart không được chọn",
