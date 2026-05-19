@@ -5,19 +5,19 @@
   "item_type_not_found": "Không tìm thấy mục \"{item}\".",
   "items_not_found": "Không tìm thấy bất kỳ {item} nào.",
   "items_not_found_search": "Không tìm thấy bất kỳ {item} nào khớp với tìm kiếm của bạn.",
-  "invalid_page_plural": "Trang {page} không tồn tại! Có {max_page} trang.",
-  "invalid_page_singular": "Trang {page} không tồn tại! Có {max_page} trang.",
+  "invalid_page_plural": "Trang {page} không tồn tại! Có tổng cộng {max_page} trang.",
+  "invalid_page_singular": "Trang {page} không tồn tại! Có tổng cộng {max_page} trang.",
   "not_logged_in": "Chào mừng bạn đến với UntitledCharts!\nĐăng nhập để trải nghiệm các tính năng mới!",
   "not_found": "Không tìm thấy.",
   "unknown_error": "Lỗi không xác định!",
   "welcome": "Chào mừng {username} đến với UntitledCharts!",
   "you": "Bạn",
-  "not_mod": "Bạn không phải là người điều hành!",
-  "not_mod_or_owner": "Bạn không phải là người điều hành hoặc chủ sở hữu!",
-  "is_mod": "Bạn là người điều hành!",
+  "not_mod": "Bạn không phải là kiểm duyệt viên!",
+  "not_mod_or_owner": "Bạn không phải là kiểm duyệt viên hoặc chủ sở hữu!",
+  "is_mod": "Bạn là kiểm duyệt viên!",
   "is_admin": "Bạn là quản trị viên!",
   "not_admin": "Bạn không phải là quản trị viên!",
-  "not_admin_or_owner": "Bạn không phải là người quản lý hoặc chủ sở hữu!",
+  "not_admin_or_owner": "Bạn không phải là quản trị viên hoặc chủ sở hữu!",
   "mod_powers": [
     "Xóa các bình luận vi phạm quy tắc",
     "Xem lại chart để biết lựa chọn của đội ngũ!",
@@ -28,7 +28,7 @@
   ],
   "staff_pick": "Chart được bình chọn bởi đội ngũ",
   "staff_pick_desc": "Những chart này được đội ngũ bình chọn là những chart thú vị nhất, có thể chơi được đối với đa số người chơi có trình độ phù hợp!",
-  "non_staff_pick_desc": "Những chart này không được đội ngũ bình chọn là chart không thú vị, có đôi phần khó hơn hoặc chưa được hoàn thiện, bạn có thể trải nghiệm nếu muốn.",
+  "non_staff_pick_desc": "Những chart này không được đội ngũ bình chọn là chart thú vị, có đôi phần khó hơn hoặc chưa được hoàn thiện, bạn có thể trải nghiệm nếu muốn.",
   "staff_pick_notice": "Đừng có cầu xin đội ngũ chúng tôi thêm chart của bạn vào danh sách bình chọn. Cùng lắm thì bạn có thể hỏi chúng tôi đánh giá chart của bạn",
   "staff_pick_confirm": "Xác nhận chart này vui, hãy chấm điểm chuẩn là (±1) hoặc có thể ghi là chơi ổn.",
   "staff_pick_add": "Thêm vào danh sách được chọn",
@@ -56,6 +56,14 @@
   "a_lot": "Rất nhiều",
   "extreme": "Cực độ",
   "max_uwu": "Tối đa",
+  "invalid_constant": "Hằng số độ khó không hợp lệ! Hằng số chỉ được trong khoảng từ -999 đến 999 và tối đã 4 chữ số thập phân!",
+  "rerate": "Đặt lại cấp độ khó",
+  "rerate_desc": "Đặt lại cấp độ khó. Bạn có thể thêm hằng số độ khó nếu muốn.",
+  "rerate_desc_not_mod": "Đặt lại cấp độ khó.",
+  "show_resource_buttons": "Hiển thị tài nguyên Server tại trang chủ",
+  "like": "Like ({num})",
+  "unlike": "Unlike ({num})",
+  "announcements": "Thông báo",
   "search": {
     "FILTERS": "Bộ lọc (Trang {page}/{pageCount})",
     "ADVANCED_SEARCH": "Tìm kiếm nâng cao",
@@ -98,6 +106,15 @@
     "VISIBILITY_PRIVATE": "Riêng tư"
   },
   "leaderboard": {
+    "YOU_ARE_BANNED": "Bạn đã bị cấm!",
+    "ARCADE_SCORE_SPEED": "Điểm số",
+    "ACCURACY_SCORE": "Độ chính xác",
+    "ARCADE_SCORE_NO_SPEED": "Điểm số (Không thưởng Tốc độ nhạc)",
+    "RANK_MATCH": "Điểm Đấu hạng",
+    "LEAST_COMBO_BREAKS": "Số lượt mất Combo ít nhất",
+    "LEAST_MISSES": "Số lượng Miss ít nhất",
+    "PERFECT": "Số lượng Perfect",
+    "BAD_ENGINE": "Engine {engine_name} không hỗ trợ đăng tải điểm số."
   },
   "background": {
     "BACKGROUNDSELECT": "Hình nền mặc định",
@@ -115,18 +132,19 @@
     "UPLOADEDSUB": "Xem tất cả chart của bạn đã tải lên."
   },
   "notification": {
-    "NOTIFICATION": "Thông báo",
-    "none_past": "Bạn không có thông báo cũ nào.",
-    "none": "Bạn không có thông báo chưa đọc.",
-    "UNREAD": "Thông báo chưa đọc",
+    "NOTIFICATION": "Tin nhắn",
+    "none_past": "Bạn không có tin nhắn cũ nào.",
+    "none": "Bạn không có tin nhắn chưa đọc.",
+    "UNREAD": "Tin nhắn chưa đọc",
     "UNREAD_STATUS": "Chưa đọc",
     "READ_STATUS": "Đã đọc",
-    "NOTIFICATION_DESC_UNREAD": "Bạn có thể xem lại thông báo cũ bằng cách nhấn \"Thêm\". Hiện có thông báo chưa đọc cần xử lý.",
-    "NOTIFICATION_DESC": "Bạn có thể xem lại thông báo cũ bằng cách nhấn \"Thêm\". Hiện tại không có thông báo chưa đọc.",
+    "NOTIFICATION_DESC_UNREAD": "Bạn có thể xem lại tin nhắn cũ bằng cách nhấn \"Thêm\". Hiện có tin nhắn chưa đọc cần xử lý.",
+    "NOTIFICATION_DESC": "Bạn có thể xem lại tin nhắn cũ bằng cách nhấn \"Thêm\". Hiện tại không có tin nhắn chưa đọc.",
     "templates": {
       "CHART_VISIBILITY_CHANGED": "Chế độ hiển thị của chart \"{chart_name}\" đã được đổi thành {visibility_status}. Vui lòng xem lại chính sách tải lên để biết lý do. Nếu chỉnh sửa để phù hợp, bạn có thể đặt lại thành Công khai. Nếu không, hãy giữ nguyên, nếu không có thể bị xóa.",
       "COMMENT_DELETED": "Bình luận của bạn đã bị xóa vì vi phạm quy tắc. Hãy đảm bảo bình luận tuân thủ nguyên tắc cộng đồng.\n\n----------------------\nBình luận:\n\n{comment_content}",
-      "CHART_DELETED": "Chart \"{chart_name}\" của bạn đã bị gỡ bỏ vì vi phạm quy tắc tải lên. Vui lòng xem lại hướng dẫn tải lên để biết thêm chi tiết."
+      "CHART_DELETED": "Chart \"{chart_name}\" của bạn đã bị gỡ bỏ vì vi phạm quy tắc tải lên. Vui lòng xem lại hướng dẫn tải lên để biết thêm chi tiết.",
+      "LEADERBOARD_SCORE_DELETED": "Điểm số của bạn trên bảng xếp hạng chart \"{chart_name}\" đã bị gỡ bỏ vì vi phạm quy tắc. Vui lòng xem lại hướng dẫn để biết thêm chi tiết."
     }
   }
 }
